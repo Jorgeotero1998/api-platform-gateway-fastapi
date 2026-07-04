@@ -1,20 +1,37 @@
-# API Platform (Keys, Quotas, Rate Limits) — ES/EN
+# OteroAPI Platform
 
-## Español
+**EN**: API Keys + Rate Limiting + Usage Logs  
+**ES**: API Keys + Rate limiting + logs de uso
 
-Mini “API platform” estilo gateway:
+## Live demo / Demo online
+- **Web**: https://api-platform-gateway-fastapi.vercel.app
+- **API docs**: https://api-platform-gateway-fastapi-api.onrender.com/docs
+- **API health**: https://api-platform-gateway-fastapi-api.onrender.com/api/v1/health
 
-- Crear API keys (admin)
-- Validación por header `X-API-Key`
-- Rate limit con Redis (fixed-window) + logs de uso
+## Stack
+- FastAPI
+- PostgreSQL
+- Key Value
+- Rate Limit
 
-### Endpoints
-- `/api/v1/platform/api-keys` (POST/GET, admin)
-- `/api/v1/platform/echo` (GET, requiere `X-API-Key`)
+## Local setup (Docker)
 
----
+`ash
+cp .env.example .env
+docker compose up --build
+`
 
-## English
+## Credentials (demo)
 
-API platform gateway with API keys, Redis-backed rate limiting, and usage logs.
+**EN**: Default demo admin is seeded from ADMIN_EMAIL / ADMIN_PASSWORD.  
+**ES**: El admin demo se crea desde ADMIN_EMAIL / ADMIN_PASSWORD.
 
+## Deploy
+
+**EN**:
+- Backend: Render (Blueprint via ender.yaml)
+- Frontend: Vercel (Root Directory: web)
+
+**ES**:
+- Backend: Render (Blueprint con ender.yaml)
+- Frontend: Vercel (Root Directory: web)
